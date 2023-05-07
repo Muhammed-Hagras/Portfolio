@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Portfolio.module.scss";
 import {
+  fadeIn,
+  slideIn,
   staggerChildren,
   staggerContainer,
   textVariant,
@@ -10,7 +12,16 @@ import { BsGithub } from "react-icons/bs";
 import { portfolioExp } from "../../utils/data";
 
 export default function Portfolio() {
-  console.log(portfolioExp);
+  const [filter, setFilter] = useState(portfolioExp);
+  //   console.log(portfolioExp);
+
+  const filteredProducts = (categ) => {
+    console.log("haha");
+    const updatedList = portfolioExp.filter((exp) => exp.cat === categ);
+    console.log(updatedList);
+    setFilter(updatedList);
+  };
+
   return (
     <motion.section
       variants={staggerContainer}
@@ -20,7 +31,10 @@ export default function Portfolio() {
       className={`bg-primary paddings ${styles.wrapper}`}
     >
       <div className={`${styles.container}`}>
-        <motion.div variants={textVariant(0.4)} className={`flexCenter `}>
+        <motion.div
+          variants={textVariant(0.4)}
+          className={`flexCenter ${styles.portfolioHead}`}
+        >
           <div className="textCenter">
             <span className="primaryText">My Latest Works</span>
             <p style={{ marginTop: "10px" }}>
@@ -28,24 +42,60 @@ export default function Portfolio() {
             </p>
           </div>
         </motion.div>
-        <div className={`flexCenter paddings ${styles.portfolioCards}`}>
-          {portfolioExp.map((exp, idx) => (
-            <div key={idx} className={`${styles.card}`}>
+        {/* Filter Buttons */}
+        <div className={`flexCenter ${styles.filterBtns}`}>
+          <button
+            className={`${styles.cardBtn}`}
+            onClick={() => {
+              setFilter(portfolioExp);
+            }}
+          >
+            ALL
+          </button>
+
+          <button
+            className={`${styles.cardBtn}`}
+            onClick={() => {
+              filteredProducts("react");
+            }}
+          >
+            React
+          </button>
+          <button
+            className={`${styles.cardBtn}`}
+            onClick={() => {
+              filteredProducts("next");
+            }}
+          >
+            Next
+          </button>
+          <button
+            className={`${styles.cardBtn}`}
+            onClick={() => {
+              filteredProducts("html");
+            }}
+          >
+            HTML/SASS
+          </button>
+        </div>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 0.6)}
+          className={` paddings ${styles.portfolioCards}`}
+        >
+          {filter.map((exp, idx) => (
+            <motion.div key={idx} className={`${styles.card}`}>
               <img src={exp.pic} className="" alt="" />
               <div className="card-body ">
-                <h5 className={`${styles.cardTitle}`}>Card title</h5>
-                <p className={`${styles.cardText}`}>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" className={`${styles.cardBtn}`}>
-                  Go somewhere
-                  <BsGithub />
+                <h5 className={`${styles.cardTitle}`}>{exp.title}</h5>
+                <p className={`${styles.cardText}`}>{exp.desc}</p>
+                <a href={exp.link} className={`${styles.cardBtn}`}>
+                  code & link
+                  <BsGithub size={25} />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

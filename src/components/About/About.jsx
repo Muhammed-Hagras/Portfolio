@@ -24,7 +24,7 @@ export default function About() {
           Passion Fuels Purpose
         </motion.h2>
         <motion.div
-          // variants={fadeIn("up", "tween", 0.5, 1.3)}
+          variants={fadeIn("up", "tween", 0.5, 1.3)}
           className={`${styles.aboutBoxes} flexCenter`}
         >
           {abouts.map((about, idx) => (

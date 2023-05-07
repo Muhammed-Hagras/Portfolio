@@ -89,7 +89,7 @@ export default function Portfolio() {
                 <h5 className={`${styles.cardTitle}`}>{exp.title}</h5>
                 <p className={`${styles.cardText}`}>{exp.desc}</p>
                 <a href={exp.link} className={`${styles.cardBtn}`}>
-                  code & link
+                  code & demo
                   <BsGithub size={25} />
                 </a>
               </div>

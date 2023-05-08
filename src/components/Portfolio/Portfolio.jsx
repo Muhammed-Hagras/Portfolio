@@ -34,18 +34,18 @@ export default function Portfolio() {
       <a href="" className="anchor" id="portfolio"></a>
       <div className={`${styles.container}`}>
         <motion.div
-          // variants={textVariant(0.4)}
-          initial={{ y: 100 }}
-          whileInView={{
-            y: 0,
-          }}
-          transition={{
-            type: "tween",
-            stiffness: 260,
-            damping: 20,
-            delay: 0.3,
-            duration: 0.5,
-          }}
+          variants={textVariant(0.4)}
+          // initial={{ y: 100 }}
+          // whileInView={{
+          //   y: 0,
+          // }}
+          // transition={{
+          //   type: "tween",
+          //   stiffness: 260,
+          //   damping: 20,
+          //   delay: 0.3,
+          //   duration: 0.5,
+          // }}
           // variants={slideIn("down", "tween", 0.3, 0.3)}
           className={`${styles.portfolioHead}`}
         >
@@ -57,101 +57,62 @@ export default function Portfolio() {
           </div>
         </motion.div>
         {/* Filter Buttons */}
-        <motion.div className={`flexCenter ${styles.filterBtns}`}>
-          <motion.button
-            initial={{ y: 100 }}
-            whileInView={{
-              y: 0,
-            }}
-            transition={{
-              type: "tween",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.3,
-              duration: 0,
-            }}
+        <motion.div
+          variants={slideIn("up", "tween", 0.3, 0.3)}
+          className={`flexCenter ${styles.filterBtns}`}
+        >
+          <button
             className={`${styles.cardBtn}`}
             onClick={() => {
               setFilter(portfolioExp);
             }}
           >
             ALL
-          </motion.button>
+          </button>
 
-          <motion.button
-            initial={{ y: 100 }}
-            whileInView={{
-              y: 0,
-            }}
-            transition={{
-              type: "tween",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.3,
-              duration: 0,
-            }}
+          <button
             className={`${styles.cardBtn}`}
             onClick={() => {
               filteredProducts("react");
             }}
           >
             React
-          </motion.button>
-          <motion.button
-            initial={{ y: 100 }}
-            whileInView={{
-              y: 0,
-            }}
-            transition={{
-              type: "tween",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.3,
-              duration: 0,
-            }}
+          </button>
+
+          <button
             className={`${styles.cardBtn}`}
             onClick={() => {
               filteredProducts("next");
             }}
           >
             Next
-          </motion.button>
-          <motion.button
-            initial={{ y: 100 }}
-            whileInView={{
-              y: 0,
-            }}
-            transition={{
-              type: "tween",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.3,
-              duration: 0,
-            }}
+          </button>
+
+          <button
             className={`${styles.cardBtn}`}
             onClick={() => {
               filteredProducts("html");
             }}
           >
             HTML/SASS
-          </motion.button>
+          </button>
           {/* Projects */}
         </motion.div>
         <div className={` paddings ${styles.portfolioCards}`}>
           {filter.map((exp, idx) => (
             <motion.div
-              // variants={slideIn("down", "tween", 0.3, 0.3)}
-              initial={{ y: 100 }}
-              whileInView={{
-                y: 0,
-              }}
-              transition={{
-                type: "tween",
-                stiffness: 260,
-                damping: 20,
-                delay: 0.3,
-                duration: 0.3,
-              }}
+              variants={slideIn("up", "tween", 0.3, 0.3)}
+              // initial={{ y: 100 }}
+              // whileInView={{
+              //   y: 0,
+              // }}
+              // transition={{
+              //   type: "tween",
+              //   stiffness: 260,
+              //   damping: 20,
+              //   delay: 0.3,
+              //   duration: 0.3,
+              // }}
               key={idx}
               className={`${styles.card}`}
             >

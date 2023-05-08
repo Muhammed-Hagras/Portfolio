@@ -93,5 +93,25 @@
         margin-bottom: -5px;
       }
     }
+    .resume {
+      @media (max-width: $sm) {
+        position: relative;
+        display: none;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      background-color: $primary;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      color: $secondary-white;
+      font-size: 1rem;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
   }
 }

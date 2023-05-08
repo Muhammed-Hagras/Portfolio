@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.scss";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import { motion } from "framer-motion";
+import { GrResume } from "react-icons/gr";
 
 export default function Hero() {
   return (
@@ -43,6 +44,14 @@ export default function Hero() {
             alt="person"
           />
         </motion.div>
+        {/* Resume */}
+        <a
+          className={styles.resume}
+          href="https://drive.google.com/file/d/1_JDrkeWQaQhzCGHxczhdMtFSmUWc2o9m/view"
+        >
+          Resume
+          {/* <GrResume /> */}
+        </a>
         <div className={styles.middleElements}>
           <motion.div
             variants={slideIn("up", "tween", 0.5, 2)}

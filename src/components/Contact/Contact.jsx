@@ -4,7 +4,7 @@ import styles from "./Contact.module.scss";
 import { fadeIn, staggerChildren } from "../../utils/motion";
 import { footerVariants } from "../../utils/motion";
 import { FaEnvelope } from "react-icons/fa";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
       viewport={{ once: false, amount: 0.25 }}
       className={` ${styles.wrapper}`}
     >
-      <a href="" className="anchor" id="contact"></a>
+      <a target="_blank" href="" className="anchor" id="contact"></a>
 
       <motion.div
         variants={footerVariants}
@@ -34,7 +34,7 @@ export default function Contact() {
               <FaEnvelope />
             </span>
             <span>
-              <a href="mailto:muhammedhagras237@gmail.com">
+              <a target="_blank" href="mailto:muhammedhagras237@gmail.com">
                 muhammedhagras237@gmail.com
               </a>
             </span>
@@ -47,11 +47,16 @@ export default function Contact() {
               <BsLinkedin />
             </span>
             <span>
-              <a href="https://www.linkedin.com/in/muhammed-hagras/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/muhammed-hagras/"
+              >
                 muhammed-hagras
               </a>
             </span>
           </motion.div>
+        </div>
+        <div className={`${styles.contacts}`}>
           <motion.div
             variants={fadeIn("up", "tween", 0.3, 1)}
             className={`flexCenter ${styles.contactInfo}`}
@@ -60,26 +65,62 @@ export default function Contact() {
               <BsGithub />
             </span>
             <span>
-              <a href="https://github.com/Muhammed-Hagras">Muhammed-Hagras</a>
+              <a target="_blank" href="https://github.com/Muhammed-Hagras">
+                Muhammed-Hagras
+              </a>
+            </span>
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            className={`flexCenter ${styles.contactInfo}`}
+          >
+            <span>
+              <BsWhatsapp />
+            </span>
+            <span>
+              <a target="_blank" href="https://wa.me/1279754053">
+                (+20)1279754053
+              </a>
             </span>
           </motion.div>
         </div>
-        {/* <div className={`${styles.contactsTwo}`}>
-         
-        </div> */}
+        {/* Resume */}
+        <div className={`${styles.contactsTwo}`}>
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            className={`flexCenter ${styles.contactInfo}`}
+          >
+            <span>
+              <a
+                className={styles.resume}
+                href="https://drive.google.com/file/d/1_JDrkeWQaQhzCGHxczhdMtFSmUWc2o9m/view"
+              >
+                Resume
+              </a>
+            </span>
+          </motion.div>
+        </div>
         <div>
           <ul className={`flexCenter paddings ${styles.menu}`}>
             <li>
-              <a href="#home">Home</a>
+              <a target="_blank" href="#home">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a target="_blank" href="#about">
+                About
+              </a>
             </li>
             <li>
-              <a href="#portfolio">Portfolio</a>
+              <a target="_blank" href="#portfolio">
+                Portfolio
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a target="_blank" href="#contact">
+                Contact
+              </a>
             </li>
           </ul>
         </div>

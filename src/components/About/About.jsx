@@ -9,6 +9,7 @@ import {
   fadeIn,
   staggerChildren,
 } from "../../utils/motion";
+import { GrResume } from "react-icons/gr";
 
 export default function About() {
   return (
@@ -36,6 +37,22 @@ export default function About() {
             </div>
           ))}
         </motion.div>
+        {/* Resume */}
+        <div className={`${styles.contactsTwo}`}>
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            className={`flexCenter ${styles.contactInfo}`}
+          >
+            <span>
+              <a
+                className={styles.resume}
+                href="https://drive.google.com/file/d/1_JDrkeWQaQhzCGHxczhdMtFSmUWc2o9m/view"
+              >
+                Resume
+              </a>
+            </span>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

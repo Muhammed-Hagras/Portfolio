@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className={`paddings ${styles.wrapper}`}>
+      <a href="" className="anchor" id="home"></a>
       <motion.div
         variants={staggerContainer}
         initial="hidden"

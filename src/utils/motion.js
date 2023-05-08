@@ -35,6 +35,22 @@ export const slideIn = (direction, type, delay, duration) => ({
     },
   },
 });
+export const slideInProjects = (direction, type, delay, duration) => ({
+  hidden: {
+    x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+    y: direction === "up" ? "100px" : direction === "down" ? "100px" : 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
 
 export const staggerContainer = (staggerChildren, delayChildren) => ({
   hidden: {},

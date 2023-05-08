@@ -9,6 +9,7 @@ import useHeaderShadow from "../../hooks/useHeaderShadow";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerShadow = useHeaderShadow();
+
   return (
     <motion.div
       variants={headerVariants}
@@ -22,7 +23,7 @@ export default function Header() {
         <div className={`textCenter ${styles.name}`}> Hagras</div>
         <ul
           className={`flexCenter ${styles.menu}`}
-          style={{ right: !menuOpen ? "-100%" : "" }}
+          style={{ right: !menuOpen ? "-300%" : "" }}
         >
           <li>
             <a href="#home">Home</a>
@@ -32,9 +33,6 @@ export default function Header() {
           </li>
           <li>
             <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#testimonials">Testimonials</a>
           </li>
           <li>
             <a href="#contact">Contact</a>

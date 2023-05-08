@@ -2,6 +2,7 @@
 
 .wrapper {
   position: relative;
+  overflow: hidden;
   .container {
     position: relative;
     flex-direction: column;
@@ -19,7 +20,10 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       gap: 3rem;
+
       .card {
         display: flex;
         flex-direction: column;

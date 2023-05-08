@@ -13,6 +13,7 @@ import {
 export default function About() {
   return (
     <section className={` ${styles.wrapper}`}>
+      <a href="" className="anchor" id="about"></a>
       <motion.div
         variants={staggerChildren}
         initial="hidden"

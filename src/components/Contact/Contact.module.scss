@@ -1,0 +1,115 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .contactHead {
+      .primaryText {
+        @media (max-width: $sm) {
+          font-size: 2rem;
+        }
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .secondaryText {
+        @media (max-width: $sm) {
+          font-size: 1.1rem;
+          line-height: 40px;
+        }
+        line-height: 50px;
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      align-items: center;
+      .contactInfo {
+        display: flex;
+        align-items: center;
+        border: 1px solid $secondary-white;
+        border-radius: 20px;
+        padding: 1.5rem;
+        width: fit-content;
+        gap: 2rem;
+        color: $secondary;
+        transition: all 200ms ease-out;
+
+        a {
+          color: $secondary;
+        }
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0px 21px 13px rgba(0, 0, 0, 0.04);
+        }
+      }
+    }
+    // .contactsTwo {
+    //   display: flex;
+    //   gap: 1.5rem;
+    //   align-items: center;
+    //   margin-bottom: 1.5rem;
+
+    //   .contactInfo {
+    //     display: flex;
+    //     align-items: center;
+    //     border: 1px solid $secondary-white;
+    //     border-radius: 20px;
+    //     padding: 1.5rem;
+    //     width: fit-content;
+    //     gap: 2rem;
+    //     color: $secondary;
+    //     transition: all 200ms ease-out;
+
+    //     a {
+    //       color: $secondary;
+    //     }
+
+    //     &:hover {
+    //       cursor: pointer;
+    //       box-shadow: 0px 21px 13px rgba(0, 0, 0, 0.04);
+    //     }
+    //   }
+    // }
+
+    .menu {
+      flex-wrap: wrap;
+      text-transform: uppercase;
+      font-size: 1rem;
+      list-style: none;
+      gap: 1.5rem;
+      cursor: pointer;
+
+      li {
+        a {
+          color: inherit;
+          padding: 20px 5px;
+          font-size: 20px;
+          transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+
+          &:hover {
+            color: $secondary;
+            border-bottom: 2px solid $secondary;
+          }
+        }
+      }
+    }
+  }
+}

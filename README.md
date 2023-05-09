@@ -1,21 +1,27 @@
-# Personal-Portfolio-2-starter-pack
+# [Muhammed Hagras's Portfolio](https://mohagras.netlify.app/)
 
-- https://youtubebinjanportfolio.pages.dev
+This is my Simple Portfolio where I've used and many beneficial technologies I learned.
 
-## Fonts link
 
-- https://stijndv.com/fonts/Eudoxus-Sans.css
+## TOOLS:
+- HTML.
+- CSS3.
+- Sass.
+- JavaScript.
+- Vite.
+- React JS.
+- React Icons.
+- Framer Motion
+- GitHub.
+- Netlify.
 
-## Slick slider links
+### Details:
+- HTML and Sass for creating and nicly styling the site.
+- Vite For creating react app.
+- Framer Motion for nicely animate sections and elements.
+- Netlify linked to github for deploying the final version.
 
-- https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css
 
-- https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css
+### `Live Demo`
 
-## NodeJS
-
-- https://nodejs.org/en/download/
-
-## Git
-
-- https://git-scm.com/downloads
+Open [https://mohagras.netlify.app/](https://mohagras.netlify.app/) to view it.

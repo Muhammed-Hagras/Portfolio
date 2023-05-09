@@ -2,8 +2,8 @@
 
 This is my Simple Portfolio where I've used and many beneficial technologies I learned.
 
-
 ## TOOLS:
+
 - HTML.
 - CSS3.
 - Sass.
@@ -16,11 +16,11 @@ This is my Simple Portfolio where I've used and many beneficial technologies I l
 - Netlify.
 
 ### Details:
+
 - HTML and Sass for creating and nicly styling the site.
 - Vite For creating react app.
 - Framer Motion for nicely animate sections and elements.
-- Netlify linked to github for deploying the final version.
-
+- Netlify linked to github for deploying the final version and keep it always and automatically up to date.
 
 ### `Live Demo`
 

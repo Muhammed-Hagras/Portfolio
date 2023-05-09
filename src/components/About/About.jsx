@@ -46,7 +46,8 @@ export default function About() {
             <span>
               <a
                 className={styles.resume}
-                href="https://drive.google.com/file/d/1_JDrkeWQaQhzCGHxczhdMtFSmUWc2o9m/view"
+                target="_blank"
+                href="https://drive.google.com/file/d/1Reakqq7zpcCJpskKuzQvi8g0h0D69shv/view"
               >
                 Resume
               </a>

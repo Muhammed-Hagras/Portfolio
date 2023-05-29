@@ -90,6 +90,14 @@ export const portfolioExp = [
     cat: "html",
     link: "https://github.com/Muhammed-Hagras/Solo-Web-Site",
   },
+  {
+    id: 10,
+    title: "Mapty_Workouts_APP",
+    desc: "This is a simple Mapty app using HTML_CSS_JS",
+    pic: "./workout-mapty-app.png",
+    cat: "Js",
+    link: "https://github.com/Muhammed-Hagras/Mapty_Workouts_APP",
+  },
 ];
 
 export const comments = [
